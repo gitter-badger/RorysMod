@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="chrome=1">
+   <meta name="description" content="Rory&#39;s Mod : A forge mod for Minecraft 1.7.10">
+
+   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/custom.css">
+
+   <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+   <script src="javascripts/main.js"></script>
+
+   <title>Rory&#39;s Mod</title>
+</head>
+<body>
+   <div id="header_wrap" class="outer">
+      <header class="inner">
+         <a id="forkme_banner" href="https://github.com/GOGO98901/RorysMod">View on GitHub</a>
+
+         <h1 id="project_title">Rory&#39;s Mod</h1>
+         <h2 id="project_tagline">A forge mod for Minecraft 1.7.10</h2>
+
+
+         <a class="navLink" href="index.html">Home</a>
+      </header>
+   </div>
+
+   <!-- MAIN CONTENT -->
+   <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+         <h1>Rifle Modules</h1>
+         <h2>About</h2>
+         Modules are items that allow the rifle to be changed, from damage to color to the rifle cool down.
+
+         <h4>Any errors or issues with the modules?</h4>
+         Please let me know by <a href="https://github.com/GOGO98901/RorysMod/issues/new">clicking here</a> to submit an issue.
+         <h4> Want a new module?</h4>
+         NOTE: I may not add the module, but I probably will.
+         - Create a <a href="https://github.com/GOGO98901/RorysMod/compare">pull request</a> with the new module implemented (the texture does not have to be added at this point)
+         - Create a <a href="https://github.com/GOGO98901/RorysMod/issues/new">new issue</a> that says what should be added
+
+         <h3>Contents</h3>
+         <ol>
+            <li><a href="#base-modules">Base Modules</a></li>
+            <li><a href="#capacitor-module">Capacitor Module</a></li>
+            <li><a href="#coolant-module">Coolant Module</a></li>
+            <li><a href="#lens-module">Lens Module</a></li>
+            <li><a href="#phaser-module">Phaser Module</a></li>
+            <li><a href="#overclock-module">Overclock Module</a></li>
+            <li><a href="#explosion-module">Explosion Module</a></li>
+            <li><a href="#igniter-module">Igniter Module</a></li>
+            <li><a href="#formula">Formula</a></li>
+         </ol>
+
+         <h2 id="base-modules">Base Modules</h2>
+         Each Module can stack up to 16, and will change the rifles statistics depending on which ones are added. See each module for more information.
+
+         <h2 id="capacitor-module">Capacitor Module</h2>
+         The capacitor module allows the rifle to hold more power capacity, however it also increases power usage slightly.
+
+         <h2 id="coolant-module">Coolant Module</h2>
+         This module will decrease the cool down time that it takes to fire a new laser but will also in some case reduce the power usage. Almost like an <a href="#overclock-module">overclocker</a>.
+
+         <h2 id="lens-module">Lens Module</h2>
+         This module allows the laser to change color. This feature does and does not not work currently and so this item can only be spawned in.
+
+         <h2 id="phaser-module">Phaser Module</h2>
+         This module changes the amount of damage that is given to an entity when hit. With out this module the laser will do no damage no matter what the <a href="#damage-given">formula</a> says.
+
+         <h2 id="overclock-module">Overclock Module</h2>
+         This module makes other module more power full with the cost of using more power when used
+
+         <h2 id="explosion-module">Explosion Module</h2>
+         This module allows the laser to create an explosion when the it hits either the block or an entity. If no explosion modules are present then it ill not create an explosion no matter of what the <a href="#explosion-size">formula</a> says.
+
+         <h2 id="igniter-module">Igniter Module</h2>
+         This module sets the block/entity hit on fire
+
+         <h2 id="formula">Formula</h2>
+         The bellow formulas are what the mod will be using in the next release. These are subject to change
+
+         <h4 id="capacity-size">Capacity Size</h4>
+         <pre><code>1000 + (1000 x number of capacitors) + (100 x number of overclockers)</code></pre>
+
+         <h4 id="power-usage">Power Usage</h4>
+         <pre><code>10 + (75 x number of overclockers) + (13 x number of capacitors) - number of coolant + (60 x number of phasers) + (60 x number of explosion modules)<br>if usage is less than 10 then<br>      usage equals 10<br>end if</code></pre>
+
+         <h4 id="damage-given">Damage Given</h4>
+         <pre><code>1 + (1.5 x (number of phasers + (1.2 x (number of overclockers + 1))))</code></pre>
+
+         <h4 id="explosion-size">Explosion Size</h4>
+         <pre><code>1 + (0.325 * number of explosion modules) + (0.1 * number of overclockers)</code></pre>
+
+         <h4 id="fire-time">Fire Time</h4>
+         <pre><code>round up to whole number (number of igniter modules x 1.5)</code></pre>
+
+         <div>
+            <h1><a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h1>
+            <p>See full license file <a href="https://github.com/GOGO98901/RorysMod/blob/master/LICENSE">LICENSE</a></p>
+            <pre><code>Copyright 2016 Rory Claasen<br><br>Licensed under the Apache License, Version 2.0 (the "License");<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at<br><br>    http://www.apache.org/licenses/LICENSE-2.0<br><br>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an "AS IS" BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</code></pre>
+         </div>
+      </section>
+   </div>
+
+   <!-- FOOTER  -->
+   <div id="footer_wrap" class="outer">
+      <footer class="inner">
+         <p class="copyright">Rory&#39;s Mod maintained by <a href="http://roryclaasen.co.nf">Rory Claasen</a></p>
+         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+   </div>
+
+   <script type="text/javascript">
+   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   </script>
+   <script type="text/javascript">
+   try {
+      var pageTracker = _gat._getTracker("UA-45259414-2");
+      pageTracker._trackPageview();
+   } catch(err) {}
+   </script>
+</body>
+</html>
