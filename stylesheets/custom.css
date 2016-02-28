@@ -1,3 +1,13 @@
+#logo {
+	style: block;
+	width: 700px;
+	height: 150px;
+	background-image: url('https://raw.githubusercontent.com/GOGO98901/RorysMod/master/src/main/resources/assets/rorysmod/textures/logo.png');
+	background-size: cover;
+	position: relative;
+	right:100px;
+}
+
 .navLink {
 	color: white;
 	margin-right: 10px;
