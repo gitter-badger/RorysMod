@@ -8,6 +8,16 @@
 	right:100px;
 }
 
+table#build-status, img {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+	background: #C0C0C0;
+	cursor: pointer;
+	vertical-align:middle;
+}
+
 .navLink {
 	color: white;
 	margin-right: 10px;
